@@ -1,8 +1,4 @@
 <p align="center">
-  <img src="screenshots/preview.png" alt="My Awesome Polybar Setup">
-</p>
-
-<p align="center">
   <img src="https://img.shields.io/github/license/aniismess/ani-bar?style=for-the-badge&color=blueviolet">
   <img src="https://img.shields.io/github/stars/aniismess/ani-bar?style=for-the-badge&color=gold">
   <img src="https://img.shields.io/github/issues/aniismess/ani-bar?color=violet&style=for-the-badge">
@@ -12,6 +8,20 @@
 <p align="center">Welcome to my personal Polybar playground! This is where I craft my perfect Linux status bar.</p>
 
 ---
+
+## Gallery - See My Polybar in Action!
+
+I believe seeing is believing, so here are some snapshots of my Polybar setup. I've tried to capture different aspects and states to give you a good feel for how it looks and integrates with my desktop.
+
+<p align="center">
+  <img src="screenshots/polybar.png" alt="My Polybar Setup - Main View">
+</p>
+<p align="center">
+  <img src="screenshots/polybar2.png" alt="My Polybar Setup - Detailed View 1">
+</p>
+<p align="center">
+  <img src="screenshots/polybar3.png" alt="My Polybar Setup - Detailed View 2">
+</p>
 
 ## Why I Built This - ani's Rant
 
