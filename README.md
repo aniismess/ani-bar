@@ -7,6 +7,10 @@
 
 <p align="center">Welcome to my personal Polybar playground! This is where I craft my perfect Linux status bar.</p>
 
+<p align="center">
+  <b>WARNING: Linux configs break. Often. This Polybar setup is no exception. Be prepared to tinker.</b>
+</p>
+
 ---
 
 ## Gallery - See My Polybar in Action!
@@ -23,6 +27,10 @@ I believe seeing is believing, so here are some snapshots of my Polybar setup. I
   <img src="screenshots/polybar3.png" alt="My Polybar Setup - Detailed View 2">
 </p>
 
+<p align="center">
+  <b>These screenshots showcase the sleek, functional, and highly customizable nature of this Polybar setup. From dynamic system information to elegant aesthetics, it's designed to enhance your Linux desktop experience.</b>
+</p>
+
 ## Why I Built This - ani's Rant
 
 So, I got tired of bland, boring status bars. I wanted something that not only looked slick but also gave me all the info I needed, right when I needed it. That's why I dove deep into Polybar. This repo? It's my journey, my experiments, and my ultimate setup. I've poured a lot of thought (and a few late nights) into making this both beautiful and functional. I hope you dig it!
@@ -37,15 +45,60 @@ I like things organized, so I've structured this repo like my digital workspace 
 -   `scripts/`: This is where all my custom scripts live. These are the little workhorses that fetch dynamic data for my modules – think network speeds, system updates, and other cool stuff.
 -   `screenshots/`: This is where I'll drop some eye candy – screenshots and maybe even a demo video of my Polybar in action. You gotta see it to believe it!
 
+## Dependencies - What You'll Need
+
+To get the full experience of this Polybar setup, you'll need a few things installed on your system. Here's a list of the main dependencies:
+
+-   **Polybar**: The star of the show!
+    -   *Arch Linux*: `sudo pacman -S polybar`
+    -   *Debian/Ubuntu*: `sudo apt install polybar`
+-   **Nerd Fonts**: For those awesome icons. Install your favorite Nerd Font (e.g., FiraCode Nerd Font, JetBrainsMono Nerd Font) and run `fc-cache -fv`.
+-   **`feh`**: For setting wallpapers, especially if you're using the `get_wallpaper.sh` script.
+    -   *Arch Linux*: `sudo pacman -S feh`
+    -   *Debian/Ubuntu*: `sudo apt install feh`
+-   **`pywal`**: If you want dynamic colors based on your wallpaper.
+    -   *Installation*: `pip install pywal` (ensure you have `python-pip` installed first)
+-   **`libnotify-bin`**: For desktop notifications (e.g., pomodoro timer).
+    -   *Arch Linux*: `sudo pacman -S libnotify` (or a notification daemon like `dunst`)
+    -   *Debian/Ubuntu*: `sudo apt install libnotify-bin`
+-   **`pulseaudio-utils`** (or `alsa-utils`): For sound playback (e.g., pomodoro timer sound).
+    -   *Arch Linux*: `sudo pacman -S pulseaudio-alsa` (or `alsa-utils`)
+    -   *Debian/Ubuntu*: `sudo apt install pulseaudio-utils` (or `alsa-utils`)
+-   **`iproute2`**: Provides the `ip` command used in network scripts (usually pre-installed).
+-   **`pacman-contrib`**: For the `checkupdates` script on Arch Linux.
+    -   *Arch Linux*: `sudo pacman -S pacman-contrib`
+
 ## Getting Started - Your Journey Begins Here
 
-Ready to try out my setup? Awesome! Here's how I'd get you up and running:
+Ready to try out my setup? Awesome! You have two main options:
 
-1.  **Clone My Repo**: Grab a copy of my config. I usually put it in my `~/.config/polybar` directory, but you do you.
+### Option 1: Use the Automated Install Script (Recommended for Fresh Setups)
+
+For a quick and easy setup, especially on a fresh system, use the provided `install.sh` script. This script will:
+
+-   Detect your operating system (Arch Linux or Debian/Ubuntu).
+-   Install Polybar and all necessary dependencies (you may be prompted for your `sudo` password).
+-   Clone this repository into `~/.config/polybar` (backing up any existing configuration).
+-   Make all custom scripts executable.
+
+To run the automated installer:
+
+```bash
+cd /path/to/ani-bar # Navigate to the cloned repository directory
+sudo ./install.sh
+```
+
+After the script completes, it will provide instructions on how to launch Polybar and set it up for autostart.
+
+### Option 2: Manual Installation (For the Tinkerer)
+
+If you prefer to do things manually, here's how:
+
+1.  **Install Dependencies**: Make sure you have all the necessary dependencies installed as listed in the "Dependencies" section above.
+2.  **Clone My Repo**: Grab a copy of my config. I usually put it in my `~/.config/polybar` directory, but you do you.
     ```bash
-    git clone git@github.com:aniismess/ani-bar.git ~/.config/polybar
+    git clone @github.com:aniismess/ani-bar.git ~/.config/polybar
     ```
-2.  **Polybar, Duh!**: Make sure you have Polybar installed. If you don't, your distro's package manager is your friend. For Arch, it's `sudo pacman -S polybar`. For Debian/Ubuntu, `sudo apt install polybar`.
 3.  **Script Power-Up**: My custom scripts need to be executable. I just `chmod +x` everything in the `scripts/` directory.
     ```bash
     chmod +x ~/.config/polybar/scripts/*
