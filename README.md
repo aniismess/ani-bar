@@ -1,3 +1,4 @@
+<p align="center">POLYBAR</p>
 <p align="center">
   <img src="https://img.shields.io/github/license/aniismess/ani-bar?style=for-the-badge&color=blueviolet">
   <img src="https://img.shields.io/github/stars/aniismess/ani-bar?style=for-the-badge&color=gold">
@@ -5,7 +6,7 @@
   <img src="https://img.shields.io/github/forks/aniismess/ani-bar?color=teal&style=for-the-badge">
 </p>
 
-<p align="center">POLYBAR</p>
+
 
 <p align="center">
   <b>WARNING: Linux configs break. Often. This Polybar setup is no exception. Be prepared to tinker.</b>
