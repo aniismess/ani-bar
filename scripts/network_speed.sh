@@ -1,39 +1,41 @@
 #!/bin/bash
 
-# Get the network interface (e.g., eth0, wlan0)
-# You might need to adjust this based on your actual interface name
+# made by ani
+
+# This script shows my network speed. Gotta know if my internet is fast enough for my memes.
+
+# I grab the network interface. You might need to tweak this if your setup is weird.
 INTERFACE=$(ip route | grep default | awk '{print $5}' | head -n 1)
 
 if [ -z "$INTERFACE" ]; then
-    echo "N/A"
+    echo "N/A" # If no interface, I just say N/A. Simple.
     exit 1
 fi
 
-# Get RX and TX bytes from /proc/net/dev using awk
+# I pull the raw byte counts from /proc/net/dev. This is where the magic happens.
 RX_BYTES=$(grep "$INTERFACE" /proc/net/dev | awk '{print $2}')
 TX_BYTES=$(grep "$INTERFACE" /proc/net/dev | awk '{print $10}')
 
-# Store previous values
+# I store the previous values in a temp file. This helps me calculate the difference.
 PREV_RX_BYTES=$(cat /tmp/polybar_prev_rx_bytes 2>/dev/null || echo 0)
 PREV_TX_BYTES=$(cat /tmp/polybar_prev_tx_bytes 2>/dev/null || echo 0)
 
-# Calculate difference
+# Calculate the difference in bytes. This is how much data moved since last check.
 DIFF_RX=$((RX_BYTES - PREV_RX_BYTES))
 DIFF_TX=$((TX_BYTES - PREV_TX_BYTES))
 
-# Save current values for next iteration
+# Save current values for the next round. Future me will thank me.
 echo "$RX_BYTES" > /tmp/polybar_prev_rx_bytes
 echo "$TX_BYTES" > /tmp/polybar_prev_tx_bytes
 
-# Get time difference (assuming script runs every 1 second)
-# If Polybar interval is different, adjust this
+# Time difference is usually 1 second, matching my Polybar interval. If you change Polybar's interval, change this too!
 TIME_DIFF=1
 
-# Calculate speeds in KB/s
+# Calculate speeds in KB/s. Because I like my numbers clean.
 RX_SPEED=$((DIFF_RX / 1024 / TIME_DIFF))
 TX_SPEED=$((DIFF_TX / 1024 / TIME_DIFF))
 
-# Format output
+# Format the output. If it's over 1MB/s, I show it in MB/s. Otherwise, KB/s. Keeps it readable.
 if (( RX_SPEED > 1024 || TX_SPEED > 1024 )); then
     RX_SPEED_MB=$(echo "scale=1; $RX_SPEED / 1024" | bc)
     TX_SPEED_MB=$(echo "scale=1; $TX_SPEED / 1024" | bc)
