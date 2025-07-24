@@ -13,11 +13,11 @@
 
 ---
 
-## 🚀 Why I Built This (ani's Rant)
+## Why I Built This - ani's Rant
 
 So, I got tired of bland, boring status bars. I wanted something that not only looked slick but also gave me all the info I needed, right when I needed it. That's why I dove deep into Polybar. This repo? It's my journey, my experiments, and my ultimate setup. I've poured a lot of thought (and a few late nights) into making this both beautiful and functional. I hope you dig it!
 
-## 📂 My Polybar Universe (Structure)
+## My Polybar Universe - Structure
 
 I like things organized, so I've structured this repo like my digital workspace – clean and logical. Here's the lowdown on where everything lives:
 
@@ -27,7 +27,7 @@ I like things organized, so I've structured this repo like my digital workspace 
 -   `scripts/`: This is where all my custom scripts live. These are the little workhorses that fetch dynamic data for my modules – think network speeds, system updates, and other cool stuff.
 -   `screenshots/`: This is where I'll drop some eye candy – screenshots and maybe even a demo video of my Polybar in action. You gotta see it to believe it!
 
-## ⚡ Getting Started (Your Journey Begins Here)
+## Getting Started - Your Journey Begins Here
 
 Ready to try out my setup? Awesome! Here's how I'd get you up and running:
 
@@ -45,7 +45,7 @@ Ready to try out my setup? Awesome! Here's how I'd get you up and running:
     ~/.config/polybar/launch.sh
     ```
 
-## 🎨 Theming & Customization (ani's Way)
+## Theming & Customization - ani's Way
 
 I've designed my Polybar setup to be pretty flexible, so you can tweak it to your heart's content. Here's how I usually go about it:
 
@@ -67,7 +67,7 @@ All my individual module configurations live in `modules/modules.ini`. If you wa
 
 I've tried to keep each module's configuration self-contained in `modules/modules.ini` so it's easy to understand and modify.
 
-## 🛠️ Troubleshooting & Distro Woes (ani's Fixes)
+## Troubleshooting & Distro Woes - ani's Fixes
 
 Even the best setups hit a snag sometimes. Here are some common issues I've run into and how I usually fix them, especially across different Linux distros:
 
@@ -95,10 +95,10 @@ The `hwmon-path` in the `[module/temp]` section of `modules/modules.ini` is ofte
 
 -   **Fix**: You'll need to find your correct `hwmon` path. I usually do this by looking in `/sys/class/hwmon/` and finding the right `temp1_input` file for my CPU. It might be `hwmon0`, `hwmon1`, etc. Adjust the path in `modules/modules.ini` accordingly.
 
-## 🎥 Demo (See It in Action!)
+## Demo - See It in Action!
 
 Coming soon! I'll be adding a sweet GIF or video here to show off my Polybar setup in all its glory. Stay tuned!
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

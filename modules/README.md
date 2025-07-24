@@ -1,8 +1,8 @@
-# Polybar Modules Configuration (made by ani)
+# Polybar Modules Configuration - made by ani
 
 This directory contains modular configuration files for my Polybar setup. I've decided to separate these components from my main `config.ini` to improve organization and maintainability. This approach allows me to easily manage and update specific parts of my bar without cluttering the primary configuration file.
 
-## Files in this directory:
+## Files in this directory
 
 - `colors.ini`: I use this file to define all the color schemes for my Polybar. This makes it easy for me to change the entire color palette of my bar by modifying a single file.
 - `modules.ini`: Here, I define the individual Polybar modules that I use, such as CPU usage, memory, network, and more. I find it cleaner to define each module's specific settings in its own section within this file.
