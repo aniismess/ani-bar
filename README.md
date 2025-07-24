@@ -9,9 +9,8 @@
 
 ---
 
-## Gallery - See My Polybar in Action!
+## Gallery
 
-I believe seeing is believing, so here are some snapshots of my Polybar setup. I've tried to capture different aspects and states to give you a good feel for how it looks and integrates with my desktop.
 
 <p align="center">
   <img src="screenshots/polybar.png" alt="My Polybar Setup - Main View">
@@ -23,7 +22,7 @@ I believe seeing is believing, so here are some snapshots of my Polybar setup. I
   <img src="screenshots/polybar3.png" alt="My Polybar Setup - Detailed View 2">
 </p>
 
-## Why I Built This - ani's Rant
+## Why I Built This 
 
 So, I got tired of bland, boring status bars. I wanted something that not only looked slick but also gave me all the info I needed, right when I needed it. That's why I dove deep into Polybar. This repo? It's my journey, my experiments, and my ultimate setup. I've poured a lot of thought (and a few late nights) into making this both beautiful and functional. I hope you dig it!
 
@@ -37,7 +36,7 @@ I like things organized, so I've structured this repo like my digital workspace 
 -   `scripts/`: This is where all my custom scripts live. These are the little workhorses that fetch dynamic data for my modules – think network speeds, system updates, and other cool stuff.
 -   `screenshots/`: This is where I'll drop some eye candy – screenshots and maybe even a demo video of my Polybar in action. You gotta see it to believe it!
 
-## Getting Started - Your Journey Begins Here
+## Getting Started 
 
 Ready to try out my setup? Awesome! Here's how I'd get you up and running:
 
@@ -55,7 +54,7 @@ Ready to try out my setup? Awesome! Here's how I'd get you up and running:
     ~/.config/polybar/launch.sh
     ```
 
-## Theming & Customization - ani's Way
+## Theming & Customization 
 
 I've designed my Polybar setup to be pretty flexible, so you can tweak it to your heart's content. Here's how I usually go about it:
 
@@ -77,7 +76,7 @@ All my individual module configurations live in `modules/modules.ini`. If you wa
 
 I've tried to keep each module's configuration self-contained in `modules/modules.ini` so it's easy to understand and modify.
 
-## Troubleshooting & Distro Woes - ani's Fixes
+## Troubleshooting & Distro Woes 
 
 Even the best setups hit a snag sometimes. Here are some common issues I've run into and how I usually fix them, especially across different Linux distros:
 
@@ -86,26 +85,26 @@ Even the best setups hit a snag sometimes. Here are some common issues I've run 
 This is usually a font issue. My config uses [Nerd Fonts](https://www.nerdfonts.com/) for those cool icons. Make sure you have them installed and your font cache is updated.
 
 -   **Fix**: Install a Nerd Font (e.g., `FiraCode Nerd Font`, `JetBrainsMono Nerd Font`). Then, run `fc-cache -fv` to rebuild your font cache. Restart Polybar.
-
-### My Scripts Aren't Working!
+-   
+### My Scripts Aren't Working
 
 Polybar relies on external scripts for a lot of dynamic info. If something's not showing up, it's probably a script problem.
 
 -   **Fix**: First, check if the script is executable: `ls -l ~/.config/polybar/scripts/your_script.sh`. If it doesn't have `x` permissions, run `chmod +x ~/.config/polybar/scripts/your_script.sh`. Also, check the script's output directly in your terminal to see if it's throwing errors.
 
-### Polybar Isn't Launching at All!
+### Polybar Isn't Launching at All
 
 This can be a few things. Check your `launch.sh` script and your window manager's autostart config.
 
 -   **Fix**: Try running `~/.config/polybar/launch.sh` directly in your terminal. Look for any error messages. Also, ensure your `~/.xinitrc` or i3 config (or whatever you use) is correctly calling `launch.sh`.
 
-### My `temp` Module is Broken!
+### My `temp` Module is Broken
 
 The `hwmon-path` in the `[module/temp]` section of `modules/modules.ini` is often distro-specific. Mine is set to `/sys/class/hwmon/hwmon4/temp1_input`, but yours might be different.
 
 -   **Fix**: You'll need to find your correct `hwmon` path. I usually do this by looking in `/sys/class/hwmon/` and finding the right `temp1_input` file for my CPU. It might be `hwmon0`, `hwmon1`, etc. Adjust the path in `modules/modules.ini` accordingly.
 
-## Demo - See It in Action!
+## Demo - See It in Action
 
 Coming soon! I'll be adding a sweet GIF or video here to show off my Polybar setup in all its glory. Stay tuned!
 
