@@ -37,7 +37,7 @@
 
 So, I got tired of bland, boring status bars. I wanted something that not only looked slick but also gave me all the info I needed, right when I needed it. That's why I dove deep into Polybar. This repo? It's my experiments. I've poured a lot of thought (and a few late nights) into making this both beautiful and functional. I hope you dig it!
 
-##Structure
+## Structure
 
 I like things organized, so I've structured this repo like my digital workspace – clean and logical. Here's the lowdown on where everything lives:
 
