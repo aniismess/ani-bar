@@ -3,7 +3,7 @@
 # made by ani
 # This is my Pomodoro timer script. It helps me manage my work and break intervals. Stay focused, stay productive!
 
-# I use these files to keep track of the timer's state and when it started. Gotta be persistent!
+
 STATE_FILE="/tmp/polybar_pomodoro_state"
 START_TIME_FILE="/tmp/polybar_pomodoro_start_time"
 
@@ -25,7 +25,7 @@ CURRENT_TIME=$(date +%s)
 # Calculate how much time has passed.
 ELAPSED_TIME=$((CURRENT_TIME - START_TIME))
 
-# This is where the magic happens: I check the current state and switch if the time is up.
+
 if [ "$CURRENT_STATE" == "work" ]; then
     REMAINING_TIME=$((WORK_DURATION - ELAPSED_TIME))
     if [ "$REMAINING_TIME" -le 0 ]; then
@@ -33,7 +33,7 @@ if [ "$CURRENT_STATE" == "work" ]; then
         echo "chill" > "$STATE_FILE"
         date +%s > "$START_TIME_FILE"
         REMAINING_TIME=$CHILL_DURATION # Start chill countdown from full duration
-        CURRENT_STATE="chill" # Update current state for immediate display
+        CURRENT_STATE="chill" 
     fi
 elif [ "$CURRENT_STATE" == "chill" ]; then
     REMAINING_TIME=$((CHILL_DURATION - ELAPSED_TIME))
@@ -46,19 +46,17 @@ elif [ "$CURRENT_STATE" == "chill" ]; then
     fi
 fi
 
-# Just making sure the remaining time doesn't go negative for display. No weird numbers on my bar.
+
 if [ "$REMAINING_TIME" -lt 0 ]; then
     REMAINING_TIME=0
 fi
 
-# Format the remaining time into minutes and seconds. Looks cleaner this way.
 MINUTES=$((REMAINING_TIME / 60))
 SECONDS=$((REMAINING_TIME % 60))
 
-# Ensure seconds always have two digits. Consistency is key.
+
 printf -v FORMATTED_SECONDS "%02d" "$SECONDS"
 
-# Finally, I output the current state and remaining time for Polybar to display.
 if [ "$CURRENT_STATE" == "work" ]; then
     echo " WORK: ${MINUTES}:${FORMATTED_SECONDS}"
 elif [ "$CURRENT_STATE" == "chill" ]; then
