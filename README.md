@@ -71,10 +71,8 @@ To get the full experience of this Polybar setup, you'll need a few things insta
 -   **`pacman-contrib`**: For the `checkupdates` script on Arch Linux.
     -   *Arch Linux*: `sudo pacman -S pacman-contrib`
 
-## Getting Started - Your Journey Begins Here
 
 ## Getting Started 
-
 
 Ready to try out my setup? Awesome! You have two main options:
 
@@ -83,8 +81,8 @@ Ready to try out my setup? Awesome! You have two main options:
 For a quick and easy setup, especially on a fresh system, use the provided `install.sh` script. This script will:
 
 -   Detect your operating system (Arch Linux or Debian/Ubuntu).
--   Install Polybar and all necessary dependencies (you may be prompted for your `sudo` password).
--   Clone this repository into `~/.config/polybar` (backing up any existing configuration).
+-   Install Polybar and all necessary dependencies
+-   Clone this repository into `~/.config/polybar`.
 -   Make all custom scripts executable.
 
 To run the automated installer:
@@ -96,7 +94,7 @@ sudo ./install.sh
 
 After the script completes, it will provide instructions on how to launch Polybar and set it up for autostart.
 
-### Option 2: Manual Installation (For the Tinkerer)
+### Option 2: Manual Installation
 
 If you prefer to do things manually, here's how:
 
