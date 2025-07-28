@@ -164,4 +164,4 @@ The `hwmon-path` in the `[module/temp]` section of `modules/modules.ini` is ofte
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. [Script](Scripts)
