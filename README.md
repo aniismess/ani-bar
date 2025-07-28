@@ -1,3 +1,4 @@
+<p align="center">POLYBAR</p>
 <p align="center">
   <img src="https://img.shields.io/github/license/aniismess/ani-bar?style=for-the-badge&color=blueviolet">
   <img src="https://img.shields.io/github/stars/aniismess/ani-bar?style=for-the-badge&color=gold">
@@ -5,7 +6,7 @@
   <img src="https://img.shields.io/github/forks/aniismess/ani-bar?color=teal&style=for-the-badge">
 </p>
 
-<p align="center">Welcome to my personal Polybar playground! This is where I craft my perfect Linux status bar.</p>
+
 
 <p align="center">
   <b>WARNING: Linux configs break. Often. This Polybar setup is no exception. Be prepared to tinker.</b>
@@ -26,15 +27,17 @@
   <img src="screenshots/polybar3.png" alt="My Polybar Setup - Detailed View 2">
 </p>
 
+
 <p align="center">
-  <b>These screenshots showcase the sleek, functional, and highly customizable nature of this Polybar setup. From dynamic system information to elegant aesthetics, it's designed to enhance your Linux desktop experience.</b>
+
 </p>
 
-## Why I Built This
+## Why I Built This 
 
-So, I got tired of bland, boring status bars. I wanted something that not only looked slick but also gave me all the info I needed, right when I needed it. That's why I dove deep into Polybar. This repo? It's my journey, my experiments, and my ultimate setup. I've poured a lot of thought (and a few late nights) into making this both beautiful and functional. I hope you dig it!
 
-## My Polybar Universe - Structure
+So, I got tired of bland, boring status bars. I wanted something that not only looked slick but also gave me all the info I needed, right when I needed it. That's why I dove deep into Polybar. This repo? It's my experiments. I've poured a lot of thought (and a few late nights) into making this both beautiful and functional. I hope you dig it!
+
+## Structure
 
 I like things organized, so I've structured this repo like my digital workspace – clean and logical. Here's the lowdown on where everything lives:
 
@@ -44,7 +47,8 @@ I like things organized, so I've structured this repo like my digital workspace 
 -   `scripts/`: This is where all my custom scripts live. These are the little workhorses that fetch dynamic data for my modules – think network speeds, system updates, and other cool stuff.
 -   `screenshots/`: This is where I'll drop some eye candy – screenshots and maybe even a demo video of my Polybar in action. You gotta see it to believe it!
 
-## Dependencies - What You'll Need
+
+## Dependencies 
 
 To get the full experience of this Polybar setup, you'll need a few things installed on your system. Here's a list of the main dependencies:
 
@@ -67,7 +71,8 @@ To get the full experience of this Polybar setup, you'll need a few things insta
 -   **`pacman-contrib`**: For the `checkupdates` script on Arch Linux.
     -   *Arch Linux*: `sudo pacman -S pacman-contrib`
 
-## Getting Started - Your Journey Begins Here
+
+## Getting Started 
 
 Ready to try out my setup? Awesome! You have two main options:
 
@@ -76,8 +81,8 @@ Ready to try out my setup? Awesome! You have two main options:
 For a quick and easy setup, especially on a fresh system, use the provided `install.sh` script. This script will:
 
 -   Detect your operating system (Arch Linux or Debian/Ubuntu).
--   Install Polybar and all necessary dependencies (you may be prompted for your `sudo` password).
--   Clone this repository into `~/.config/polybar` (backing up any existing configuration).
+-   Install Polybar and all necessary dependencies
+-   Clone this repository into `~/.config/polybar`.
 -   Make all custom scripts executable.
 
 To run the automated installer:
@@ -89,7 +94,7 @@ sudo ./install.sh
 
 After the script completes, it will provide instructions on how to launch Polybar and set it up for autostart.
 
-### Option 2: Manual Installation (For the Tinkerer)
+### Option 2: Manual Installation
 
 If you prefer to do things manually, here's how:
 

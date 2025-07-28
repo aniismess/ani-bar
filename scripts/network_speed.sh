@@ -2,7 +2,7 @@
 
 # made by ani
 
-# This script shows my network speed. Gotta know if my internet is fast enough for my memes.
+
 
 # I grab the network interface. You might need to tweak this if your setup is weird.
 INTERFACE=$(ip route | grep default | awk '{print $5}' | head -n 1)
@@ -16,11 +16,10 @@ fi
 RX_BYTES=$(grep "$INTERFACE" /proc/net/dev | awk '{print $2}')
 TX_BYTES=$(grep "$INTERFACE" /proc/net/dev | awk '{print $10}')
 
-# I store the previous values in a temp file. This helps me calculate the difference.
 PREV_RX_BYTES=$(cat /tmp/polybar_prev_rx_bytes 2>/dev/null || echo 0)
 PREV_TX_BYTES=$(cat /tmp/polybar_prev_tx_bytes 2>/dev/null || echo 0)
 
-# Calculate the difference in bytes. This is how much data moved since last check.
+
 DIFF_RX=$((RX_BYTES - PREV_RX_BYTES))
 DIFF_TX=$((TX_BYTES - PREV_TX_BYTES))
 
@@ -28,7 +27,7 @@ DIFF_TX=$((TX_BYTES - PREV_TX_BYTES))
 echo "$RX_BYTES" > /tmp/polybar_prev_rx_bytes
 echo "$TX_BYTES" > /tmp/polybar_prev_tx_bytes
 
-# Time difference is usually 1 second, matching my Polybar interval. If you change Polybar's interval, change this too!
+!
 TIME_DIFF=1
 
 # Calculate speeds in KB/s. Because I like my numbers clean.
