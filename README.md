@@ -43,9 +43,9 @@ I like things organized, so I've structured this repo like my digital workspace 
 
 -   `config.ini`: This is the brain of my Polybar. It's where I define the bar's overall look, feel, and which modules get to shine.
 -   `launch.sh`: My trusty script to kickstart Polybar. I use this to make sure everything fires up correctly when I log in or just want to restart the bar.
--   `modules/`: This is my modular playground. I've broken down my Polybar components (like colors, specific module configs) into separate `.ini` files here. It keeps my `config.ini` tidy and makes it super easy for me to swap things around or update individual bits.
--   `scripts/`: This is where all my custom scripts live. These are the little workhorses that fetch dynamic data for my modules – think network speeds, system updates, and other cool stuff.
--   `screenshots/`: This is where I'll drop some eye candy – screenshots and maybe even a demo video of my Polybar in action. You gotta see it to believe it!
+-   `[modules](modules)`: This is my modular playground. I've broken down my Polybar components (like colors, specific module configs) into separate `.ini` files here. It keeps my `config.ini` tidy and makes it super easy for me to swap things around or update individual bits.
+-   `[modules](modules)`: This is where all my custom scripts live. These are the little workhorses that fetch dynamic data for my modules – think network speeds, system updates, and other cool stuff.
+-   `[screenshots](screenshots)`: This is where I'll drop some eye candy – screenshots and maybe even a demo video of my Polybar in action. You gotta see it to believe it!
 
 
 ## Dependencies 
