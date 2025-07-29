@@ -26,7 +26,9 @@
 <p align="center">
   <img src="screenshots/polybar3.png" alt="My Polybar Setup - Detailed View 2">
 </p>
-
+<p align="center">
+  <img src="screenshots/polybar4.png" alt="Theme2">
+</p>
 
 <p align="center">
 
